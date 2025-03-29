@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -exo pipefail
+
+# install stow
+if command -v apt-get 2>&1 >/dev/null; then
+  sudo apt-get update
+  sudo apt-get install -y --no-install-recommends stow
+elif command -v apk 2>&1 >/dev/null; then
+  apk add --no-cache stow
+else
+  echo "distrobution not supported"
+  exit 1
+fi
+
+stow --version
+
+# run stow to link everything
+stow -v --target="${HOME}" .
