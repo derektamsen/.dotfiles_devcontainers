@@ -9,7 +9,7 @@ if command -v apt-get 2>&1 >/dev/null; then
 elif command -v apk 2>&1 >/dev/null; then
   apk add --no-cache stow
 else
-  echo "distrobution not supported"
+  echo "distribution not supported"
   exit 1
 fi
 
