@@ -1,6 +1,9 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-set -exo pipefail
+set -ex
+
+# install starship prompt https://starship.rs
+sh ./install.d/starship --yes
 
 # install stow
 if command -v apt-get 2>&1 >/dev/null; then
@@ -16,4 +19,7 @@ fi
 stow --version
 
 # run stow to link everything
-stow -v --target="${HOME}" .
+# this adopts existing files we would like to manage
+# then resets them to what is in the repo.
+stow --adopt -v --target="${HOME}" .
+git restore .

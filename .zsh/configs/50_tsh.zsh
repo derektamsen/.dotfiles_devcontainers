@@ -1,0 +1,1 @@
+export TELEPORT_ADD_KEYS_TO_AGENT="no"
