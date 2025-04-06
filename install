@@ -9,14 +9,15 @@ sh ./install.d/starship --yes
 if command -v apt-get 2>&1 >/dev/null; then
   sudo apt-get update
   sudo apt-get install -y --no-install-recommends \
-    autojump \
     fzf \
     stow \
+    zoxide \
     zsh-autosuggestions
 elif command -v apk 2>&1 >/dev/null; then
   apk add --no-cache \
     fzf \
     stow \
+    zoxide \
     zsh-autosuggestions
 else
   echo "distribution not supported"
