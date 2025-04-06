@@ -2,6 +2,9 @@
 
 set -ex
 
+# install zoxide
+sh ./install.d/zoxide
+
 # install starship prompt https://starship.rs
 sh ./install.d/starship --yes
 
