@@ -1,0 +1,11 @@
+.DS_Store
+.svn
+*~
+*.swp
+*.rbc
+*.iml
+.bundle
+.idea
+.rbx
+node_modules
+tags
