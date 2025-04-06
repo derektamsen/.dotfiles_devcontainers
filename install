@@ -12,13 +12,15 @@ if command -v apt-get 2>&1 >/dev/null; then
     fzf \
     stow \
     zoxide \
-    zsh-autosuggestions
+    zsh-autosuggestions \
+    zsh-syntax-highlighting
 elif command -v apk 2>&1 >/dev/null; then
   apk add --no-cache \
     fzf \
     stow \
     zoxide \
-    zsh-autosuggestions
+    zsh-autosuggestions \
+    zsh-syntax-highlighting
 else
   echo "distribution not supported"
   exit 1
